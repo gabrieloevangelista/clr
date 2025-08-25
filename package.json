@@ -8,8 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "check-env": "tsx scripts/check-env.ts",
-    "prepare-vercel": "tsx scripts/prepare-vercel-deploy.ts",
-    "postinstall": "pnpm approve-builds || true"
+    "prepare-vercel": "tsx scripts/prepare-vercel-deploy.ts"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.1",

@@ -2,12 +2,15 @@
   "framework": "nextjs",
   "buildCommand": "pnpm run build",
   "devCommand": "pnpm run dev",
-  "installCommand": "pnpm install",
+  "installCommand": "PNPM_APPROVE_BUILDS=true pnpm install",
   "regions": ["iad1"],
   "functions": {
     "app/api/**/*.ts": {
       "maxDuration": 30
     }
+  },
+  "env": {
+    "PNPM_APPROVE_BUILDS": "true"
   },
   "headers": [
     {
