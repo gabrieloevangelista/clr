@@ -28,7 +28,6 @@ const nextConfig = {
     removeConsole: process.env.NODE_ENV === 'production',
   },
   // Otimizações de build
-  swcMinify: true,
   reactStrictMode: true,
   // Reduzir bundle size
   modularizeImports: {

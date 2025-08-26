@@ -7,7 +7,7 @@ import { Search, X } from "lucide-react"
 import { attractions } from "../data/attractions"
 import Link from "next/link"
 import Image from "next/image"
-import { LayoutRouterWrapper } from "./layout-router-wrapper"
+import { ClientOnly } from "./client-only"
 
 
 interface SearchModalProps {
@@ -146,8 +146,8 @@ function SearchModalContent({ isOpen, onClose }: SearchModalProps) {
 
 export function SearchModal({ isOpen, onClose }: SearchModalProps) {
   return (
-    <LayoutRouterWrapper fallback={null}>
+    <ClientOnly fallback={null}>
       <SearchModalContent isOpen={isOpen} onClose={onClose} />
-    </LayoutRouterWrapper>
+    </ClientOnly>
   )
 }

@@ -3,7 +3,7 @@
 import { Home, MapIcon, Plane, Phone, Info } from "lucide-react"
 import Link from "next/link"
 import { cn } from "@/lib/utils"
-import { LayoutRouterWrapper } from "./layout-router-wrapper"
+import { ClientOnly } from "./client-only"
 import { useSafePathname } from "../hooks/use-safe-pathname"
 
 const navItems = [
@@ -18,7 +18,7 @@ export function MobileTabbar() {
   const currentPath = useSafePathname()
 
   return (
-    <LayoutRouterWrapper>
+    <ClientOnly>
       <div className="md:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 z-50 safe-area-padding">
         <nav className="flex justify-around items-center py-2 px-1">
           {navItems.map((item) => {
@@ -44,6 +44,6 @@ export function MobileTabbar() {
           })}
         </nav>
       </div>
-    </LayoutRouterWrapper>
+    </ClientOnly>
   )
 }
